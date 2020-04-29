@@ -1,11 +1,11 @@
 <template>
-    <div>hello home</div>
+    <div>home pages</div>
 </template>
 
 <script>
-// @ is an alias to /src
-
 export default {
     name: 'Home',
 }
 </script>
+
+<style lang="stylus" scoped></style>
