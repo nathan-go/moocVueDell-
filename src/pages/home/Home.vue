@@ -1,6 +1,6 @@
 <template>
-    <div class="home">
-        hello home
+    <div>
+        hello world
     </div>
 </template>
 
@@ -10,9 +10,4 @@ export default {
 };
 </script>
 
-<style lang="stylus" scoped>
-.home {
-  color: red;
-  font-size: 50px;
-}
-</style>
+<style lang="stylus" scoped></style>
