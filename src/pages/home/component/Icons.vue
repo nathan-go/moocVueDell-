@@ -1,6 +1,6 @@
 <template>
     <div class="icons">
-        <swiper ref="mySwiper" :options="swiperOptions">
+        <swiper ref="mySwiper" :options="swiperOptions" v-if="show">
             <swiper-slide v-for="(page, index) of pages" :key="index">
                 <div class="icon" v-for="item of page" :key="item.id">
                     <div class="icon-img">
@@ -34,68 +34,18 @@ export default {
             });
             return pages;
         },
+        show() {
+            return this.iconList.length;
+        },
+    },
+    props: {
+        iconList: Array,
     },
     data() {
         return {
             swiperOptions: {
                 loop: true,
             },
-            iconList: [
-                {
-                    id: '0001',
-                    url:
-                        'https://s.qunarzz.com/homenode/images/touchheader/hotel.png',
-                    desc: '酒店',
-                },
-                {
-                    id: '0002',
-                    url:
-                        'https://s.qunarzz.com/homenode/images/touchheader/flight.png',
-                    desc: '机票',
-                },
-                {
-                    id: '0003',
-                    url:
-                        'https://s.qunarzz.com/homenode/images/touchheader/train.png',
-                    desc: '火车票',
-                },
-                {
-                    id: '0004',
-                    url:
-                        'https://s.qunarzz.com/homenode/images/touchheader/package.png',
-                    desc: '度假',
-                },
-                {
-                    id: '0005',
-                    url:
-                        'https://s.qunarzz.com/homenode/images/touchheader/hotel.png',
-                    desc: '特价酒店',
-                },
-                {
-                    id: '0006',
-                    url:
-                        'https://s.qunarzz.com/homenode/images/touchheader/flight.png',
-                    desc: '特价机票',
-                },
-                {
-                    id: '0007',
-                    url:
-                        'https://s.qunarzz.com/homenode/images/touchheader/train.png',
-                    desc: '特价火车票双十一特价火车票的哦',
-                },
-                {
-                    id: '0008',
-                    url:
-                        'https://s.qunarzz.com/homenode/images/touchheader/package.png',
-                    desc: '特价度假',
-                },
-                {
-                    id: '0009',
-                    url:
-                        'https://s.qunarzz.com/homenode/images/touchheader/piao.png',
-                    desc: '景点门票',
-                },
-            ],
         };
     },
 };

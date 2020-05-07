@@ -25,39 +25,8 @@
 <script>
 export default {
     name: 'HomeRecommend',
-    data() {
-        return {
-            recList: [
-                {
-                    id: '0001',
-                    url:
-                        'http://img1.qunarzz.com/sight/p0/2003/28/284dafc9676b1e06a3.water.jpg_200x200_1b020636.jpg',
-                    title: '上海野生动物园',
-                    desc: '会跳芭蕾的小海狮们',
-                },
-                {
-                    id: '0002',
-                    url:
-                        'http://img1.qunarzz.com/sight/p0/1811/7e/7ecbd353174c66b1a3.img.jpg_200x200_f661532a.jpg',
-                    title: '上海欢乐谷',
-                    desc: '敢上1200米的木质过山车么？',
-                },
-                {
-                    id: '0003',
-                    url:
-                        'http://img1.qunarzz.com/sight/p0/2003/2b/2b5bd22ea6a3cff9a3.water.jpg_200x200_35882e48.jpg',
-                    title: '上海海昌海洋动物园',
-                    desc: '帅的人都过去了，你还等什么呢？',
-                },
-                {
-                    id: '0004',
-                    url:
-                        'http://img1.qunarzz.com/sight/p0/1603/8b/8b12625615da783c90.water.jpg_200x200_e4e7cadb.jpg',
-                    title: '上海海湾国家森林公园',
-                    desc: '这里最近很火的哦，快来看看吧',
-                },
-            ],
-        };
+    props: {
+        recList: Array,
     },
 };
 </script>

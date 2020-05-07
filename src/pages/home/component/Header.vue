@@ -1,22 +1,25 @@
 <template>
-  <div class="header">
-    <div class="header-left">
-      <div class="iconfont back-icon">&#xe624;</div>
+    <div class="header">
+        <div class="header-left">
+            <div class="iconfont back-icon">&#xe624;</div>
+        </div>
+        <div class="header-input">
+            <span class="iconfont">&#xe632;</span>
+            输入城市/景点/游玩主题
+        </div>
+        <div class="header-right">
+            {{ this.city }}
+            <span class="iconfont">&#xe62d;</span>
+        </div>
     </div>
-    <div class="header-input">
-      <span class="iconfont">&#xe632;</span>
-      输入城市/景点/游玩主题
-    </div>
-    <div class="header-right">
-      城市
-      <span class="iconfont">&#xe62d;</span>
-    </div>
-  </div>
 </template>
 
 <script>
 export default {
-  name: "Home"
+    name: 'Home',
+    props: {
+        city: String,
+    },
 };
 </script>
 
