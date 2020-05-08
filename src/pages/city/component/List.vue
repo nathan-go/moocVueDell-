@@ -50,7 +50,9 @@ import { mapState } from 'vuex';
 export default {
     name: 'CityList',
     mounted() {
-        this.scroll = new Bscroll(this.$refs.wrapper);
+        this.scroll = new Bscroll(this.$refs.wrapper, {
+            click: true,
+        });
     },
     props: {
         cities: Object,
