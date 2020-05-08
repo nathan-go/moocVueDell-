@@ -42,7 +42,7 @@ export default {
                 {
                     id: '0003',
                     url:
-                        'http://img1.qunarzz.com/sight/p0/201404/23/04b92c99462687fa1ba45c1b5ba4ad77.jpg_800x800_70debc93.jpg',
+                        'https://img1.qunarzz.com/vs_ceph_vs_tts/5e00057d-37f8-405a-b37a-60bc97065d51.jpg_r_1280x840x95_075e4d32.jpg',
                 },
             ],
             showGallary: false,
