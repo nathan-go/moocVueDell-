@@ -1,9 +1,9 @@
 <template>
     <div class="container" @click="handleGallary">
-        <div class="wrapper">
+        <div class="wrapper" v-if="showGallary">
             <swiper ref="mySwiper" :options="swiperOptions">
-                <swiper-slide v-for="item of imgs" :key="item.id">
-                    <img class="swipper-img" :src="item.url" />
+                <swiper-slide v-for="(item, key) of imgs" :key="key">
+                    <img class="swipper-img" :src="item" />
                 </swiper-slide>
                 <div class="swiper-pagination" slot="pagination"></div>
             </swiper>
@@ -17,9 +17,11 @@ export default {
     props: {
         imgs: {
             type: Array,
-            default() {
-                return [];
-            },
+        },
+    },
+    computed: {
+        showGallary() {
+            return this.imgs.length;
         },
     },
     data() {
