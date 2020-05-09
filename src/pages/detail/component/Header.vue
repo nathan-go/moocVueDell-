@@ -35,11 +35,20 @@ export default {
             }
         },
     },
-    activated() {
+    // activated() {
+    //     console.log('activated');
+    //     window.addEventListener('scroll', this.handleScroll);
+    // },
+    // deactivated() {
+    //     console.log('deactivated');
+    //     window.removeEventListener('scroll', this.handleScroll);
+    // },
+    mounted() {
+        console.log('mounted');
         window.addEventListener('scroll', this.handleScroll);
     },
-    deactivated() {
-        console.log('deactivated');
+    destroyed() {
+        console.log('destroyed');
         window.removeEventListener('scroll', this.handleScroll);
     },
 };
